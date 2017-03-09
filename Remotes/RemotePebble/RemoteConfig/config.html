@@ -28,7 +28,7 @@
 
     <div class="container">
       <form class="form-signin" role="form">
-        <h2 class="form-signin-heading">Server IP Address</h2>
+        <h2 class="form-signin-heading">Server Address</h2>
         <input id="ip" type="text" class="form-control" placeholder="IP address" autofocus>
         <h2 class="form-signin-heading">Server port number</h2>
         <input id="port" type="text" class="form-control" placeholder="port number" autofocus>
@@ -42,7 +42,7 @@
               <h4 class="modal-title">Error</h4>
             </div>
             <div class="modal-body">
-              <p>Complete the server IP address and port number</p>
+              <p>Complete the server address and port number</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -83,13 +83,13 @@
       return options;
     }
     function ValidateIPaddress(inputText) {
-      var ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-      if(inputText.match(ipformat)) {
+      //var ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+      //if(inputText.match(ipformat)) {
         return true;
-      }
-      else {
-        return false;
-      }
+      //}
+      //else {
+      //  return false;
+      //}
     };
     $().ready(function() {
         $("button#cancel").click(function() {

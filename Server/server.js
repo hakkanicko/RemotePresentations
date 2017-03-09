@@ -1,4 +1,7 @@
-var io = require('socket.io').listen(8082);
+var socket_port = "9092";
+var remote_presentation_port = 9191;
+
+var io = require('socket.io').listen(socket_port);
 var reveal_socket_id;
 var control_socket_id;
 
@@ -39,7 +42,7 @@ io.sockets.on('connection', function (socket) {
   });
 });
 var client = require('socket.io-client');
-var socket_client = client.connect("http://localhost:8082");
+var socket_client = client.connect("http://localhost:"+socket_port);
 socket_client.on('connect', function(){
 		    socket_client.emit('control');
 		});
@@ -55,4 +58,4 @@ s.use(function(req, res){
 		res.end('Next');
 	}
   });
-s.listen(8080);
+s.listen(remote_presentation_port);
